@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+<h1>{{ header }}</h1>
+<p>Имя пользователя: {{ user }}</p>
+{% if is_promotion %}
+    <p>Ваши товары:</p>
+    {% for product in products %}
+        <h4>Название: {{ product.name }}</h4>
+        <p>Цена: {{ product.price }}</p>
+    {% endfor %}
+{% endif %}
+</body>
+</html>
