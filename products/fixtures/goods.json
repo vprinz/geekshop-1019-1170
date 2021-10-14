@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
       "name": "Худи черного цвета с монограммами adidas Originals",
-      "image": "",
+      "image": "products_images/Adidas-hoodie_Yf1W4J4.png",
       "description": "Мягкая ткань для свитшотов. Стиль и комфорт – это образ жизни.",
       "price": "6090.00",
       "quantity": 10,
@@ -16,10 +16,10 @@
     "pk": 2,
     "fields": {
       "name": "Синяя куртка The North Face",
-      "image": "",
-      "description": "Гладкая ткань. Водонепроницаемое покрытие. Легкий и теплый пуховый наполнитель.",
+      "image": "products_images/Blue-jacket-The-North-Face.png",
+      "description": "Гладкая ткань. Водонепроницаемое покрытие. Легкий и теплый пухов",
       "price": "23725.00",
-      "quantity": 3,
+      "quantity": 15,
       "category": 1
     }
   },
@@ -28,10 +28,46 @@
     "pk": 3,
     "fields": {
       "name": "Коричневый спортивный oversized-топ ASOS DESIGN",
-      "image": "products_images/Adidas-hoodie.png",
+      "image": "products_images/Brown-sports-oversized-top-ASOS-DESIGN.png",
       "description": "Материал с плюшевой текстурой. Удобный и мягкий.",
       "price": "3390.00",
-      "quantity": 23,
+      "quantity": 12,
+      "category": 1
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+      "name": "Черный рюкзак Nike Heritage",
+      "image": "products_images/Black-Nike-Heritage-backpack.png",
+      "description": "Плотная ткань. Легкий материал.",
+      "price": "2340.00",
+      "quantity": 20,
+      "category": 4
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+      "name": "Черные туфли на платформе с 3 парами люверсов Dr Martens 1461 Bex",
+      "image": "products_images/Black-Dr-Martens-shoes.png",
+      "description": "Гладкий кожаный верх. Натуральный материал.",
+      "price": "13590.00",
+      "quantity": 5,
+      "category": 2
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+      "name": "Темно-синие широкие строгие брюки ASOS DESIGN",
+      "image": "products_images/Dark-blue-wide-leg-ASOs-DESIGN-trousers.png",
+      "description": "Легкая эластичная ткань сирсакер Фактурная ткань.",
+      "price": "2890.00",
+      "quantity": 10,
       "category": 1
     }
   }
