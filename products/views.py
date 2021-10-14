@@ -1,9 +1,6 @@
-import os
-import json
-
 from django.shortcuts import render
 
-MODULE_DIR = os.path.dirname(__file__)
+from products.models import Product, ProductCategory
 
 
 def index(request):
@@ -12,9 +9,9 @@ def index(request):
 
 
 def products(request):
-    file_path = os.path.join(MODULE_DIR, 'fixtures/goods.json')
     context = {
         'title': 'GeekShop - Каталог',
-        'products': json.load(open(file_path, encoding='utf-8'))
+        'products': Product.objects.all(),
+        'categories': ProductCategory.objects.all(),
     }
     return render(request, 'products/products.html', context)
