@@ -3,7 +3,7 @@ from django.urls import reverse
 from django.contrib import auth
 from django.contrib import messages
 
-from users.forms import UserLoginForm, UserRegistrationForm
+from users.forms import UserLoginForm, UserRegistrationForm, UserProfileForm
 
 
 def login(request):
@@ -33,6 +33,18 @@ def registration(request):
         form = UserRegistrationForm()
     context = {'title': 'GeekShop - Регистрация', 'form': form}
     return render(request, 'users/registration.html', context)
+
+
+def profile(request):
+    if request.method == 'POST':
+        form = UserProfileForm(instance=request.user, files=request.FILES, data=request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('users:profile'))
+    else:
+        form = UserProfileForm(instance=request.user)
+    context = {'title': 'GeekShop - Профиль', 'form': form}
+    return render(request, 'users/profile.html', context)
 
 
 def logout(request):
