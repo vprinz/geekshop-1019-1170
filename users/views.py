@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.contrib import auth
 from django.contrib import messages
@@ -36,6 +37,7 @@ def registration(request):
     return render(request, 'users/registration.html', context)
 
 
+@login_required
 def profile(request):
     user = request.user
     if request.method == 'POST':
