@@ -36,6 +36,12 @@ class UserDeleteView(DeleteView):
     template_name = 'admins/admin-users-update-delete.html'
     success_url = reverse_lazy('admins:admin_users')
 
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        success_url = self.get_success_url()
+        self.object.safe_delete()
+        return HttpResponseRedirect(success_url)
+
 # @user_passes_test(lambda u: u.is_staff)
 # def admin_users(request):
 #     context = {'title': 'Админ-панель - Пользовтаели', 'users': User.objects.all()}
