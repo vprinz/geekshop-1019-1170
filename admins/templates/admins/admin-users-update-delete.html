@@ -1,9 +1,9 @@
 {% extends 'admins/base.html' %}
 
 {% block content %}
-    <h1 class="mt-4">Редактирование пользователя | {{ selected_user.username }}</h1>
+    <h1 class="mt-4">Редактирование пользователя | {{ user.username }}</h1>
     <div class="card-body">
-        <form action="{% url 'admins:admin_users_update' selected_user.id %}" method="post"
+        <form action="{% url 'admins:admin_users_update' user.id %}" method="post"
               enctype="multipart/form-data">
             {% csrf_token %}
             <div class="form-row">
@@ -48,7 +48,7 @@
         </form>
         <div class="row">
             <div class="col-lg-12" style="margin-top: 33px;">
-                <a href="{% url 'admins:admin_users_remove' selected_user.id %}">
+                <a href="{% url 'admins:admin_users_remove' user.id %}">
                     <input class="btn btn-danger btn-block" type="submit" value="Удалить">
                 </a>
             </div>
